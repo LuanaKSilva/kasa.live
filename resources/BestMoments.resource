@@ -6,7 +6,7 @@ Resource    Favorite.resource
 
 *** Variables ***
 ${BEST_MOMENTS_PAGE}    xpath=//*[text()='Melhores momentos']
-${PAGE_TITLE}           xpath=//*[contains(text(),'Melhores momentos das Partidas Finalizadas')]
+${TITLE}           xpath=//*[contains(text(),'Melhores momentos das Partidas Finalizadas')]
 ${ICON}                 xpath=(//*[contains(@class, 'chakra-icon')])[3]
 ${CHECKBOX}             xpath=(//*[contains(@class, 'chakra-checkbox')])[1]
 ${VIDEO_CARD}           xpath=//*[@class='chakra-text css-1xfi7k7'][contains(.,'Real Madrid')]
@@ -15,7 +15,7 @@ ${VIDEO_CARD}           xpath=//*[@class='chakra-text css-1xfi7k7'][contains(.,'
 E vou para a página Melhores Momentos
     Wait Until Element Is Visible       ${FAVORITE_PAGE}
     Click Element                       ${BEST_MOMENTS_PAGE}
-    Wait Until Page Contains Element    ${PAGE_TITLE}
+    Wait Until Page Contains Element    ${TITLE}
 
 Quando filtro um time
     Click Element    ${ICON}

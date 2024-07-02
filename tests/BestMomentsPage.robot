@@ -20,7 +20,7 @@ Caso de Teste 01 - Filtrar time
 Caso de Teste 02 - Não filtrar time
     [Documentation]    Esse teste verifica se o usuário desmarcar o filtro do time
     ...                os vídos do time não é mais exibidos na página
-    [Tags]             desfriltrar_videos
+    [Tags]             desfiltrar_videos
     Dado que estou logado na home page do kasa.live
     E vou para a página Melhores Momentos
     E filtro um time

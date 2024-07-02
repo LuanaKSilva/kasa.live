@@ -1,5 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
+Resource    Login.resource
 
 *** Variables ***
 ${siteName}             https://www.kasa.live/
@@ -14,3 +15,9 @@ Start Page
 Close Page
     Capture Page Screenshot
     Close Browser
+
+Exclude account
+    Click Element                       ${AVATAR_PROFILE}
+    Click Button                        ${BTN_DEL_ACCOUNT}
+    Click Button                        ${DELETE_ACCOUNT}
+    Wait Until Page Contains Element    ${ALERT}

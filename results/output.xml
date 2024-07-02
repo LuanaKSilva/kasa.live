@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-02T13:24:40.565499" rpa="false" schemaversion="5">
+<suite id="s1" name="CalendarPage" source="C:\Development\robot-framework\KasaLive\tests\CalendarPage.robot">
+<kw name="Generating data for the user" owner="Login" type="SETUP">
+<kw name="Generate Random String" owner="String">
+<msg time="2024-07-02T13:24:41.052896" level="INFO">${USER_NAME} = oslowwww</msg>
+<var>${USER_NAME}</var>
+<arg>length=8</arg>
+<arg>chars=lowercase</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.051874" elapsed="0.001022"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.052896" level="INFO">${NAME} = oslowwww</msg>
+<var>${NAME}</var>
+<arg>${USER_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.052896" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.053895" level="INFO">${USER_EMAIL} = oslowwww@testqa.com</msg>
+<var>${USER_EMAIL}</var>
+<arg>${USER_NAME}@testqa.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.052896" elapsed="0.000999"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.053895" level="INFO">${EMAIL} = oslowwww@testqa.com</msg>
+<var>${EMAIL}</var>
+<arg>${USER_EMAIL}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.053895" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-07-02T13:24:41.053895" level="INFO">${USER_PASSWORD} = inpitseiacru</msg>
+<var>${USER_PASSWORD}</var>
+<arg>length=12</arg>
+<arg>chars=ascii_letters+digits+punctuation</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.053895" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.054896" level="INFO">${PASSWORD} = inpitseiacru</msg>
+<var>${PASSWORD}</var>
+<arg>${USER_PASSWORD}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.054896" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.054896" level="INFO">${NAME} = oslowwww</msg>
+<arg>${NAME}</arg>
+<arg>${NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.054896" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.055894" level="INFO">${EMAIL} = oslowwww@testqa.com</msg>
+<arg>${EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.054896" elapsed="0.000998"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.055894" level="INFO">${PASSWORD} = inpitseiacru</msg>
+<arg>${PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.055894" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.055894" level="INFO">Gerado nome: oslowwww</msg>
+<arg>Gerado nome: ${NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.055894" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.056895" level="INFO">Gerado e-mail: oslowwww@testqa.com</msg>
+<arg>Gerado e-mail: ${EMAIL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.056895" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T13:24:41.056895" level="INFO">Gerado senha: inpitseiacru</msg>
+<arg>Gerado senha: ${PASSWORD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.056895" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:41.050898" elapsed="0.005997"/>
+</kw>
+<test id="s1-t1" name="Caso de Teste 02 - Desmarcando a opção 'Partidas Favoritas'" line="21">
+<kw name="Start Page" owner="Base" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:41.058894" level="INFO">Opening browser 'googlechrome' to base url 'https://www.kasa.live/'.</msg>
+<arg>${siteName}</arg>
+<arg>googlechrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-02T13:24:41.058894" elapsed="3.762277"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:48.129267" level="INFO">Page title is 'Kasa.Live - Encontre o Jogo'.</msg>
+<arg>${siteNameExpected}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-07-02T13:24:44.821171" elapsed="3.309097"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-02T13:24:48.130268" elapsed="0.444894"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:41.058894" elapsed="7.516268"/>
+</kw>
+<kw name="Dado que estou logado na home page do kasa.live" owner="Home">
+<kw name="Dado que estou na home page do kasa.live" owner="Home">
+<kw name="Dado que estou na página de login do kasa.live" owner="Home">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${BTN_ENTER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-02T13:24:48.579161" elapsed="0.293434"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:48.873594" level="INFO">Clicking button 'xpath=//*[contains(@data-cy,'btn-trigger-profile') and contains(text(), 'Entrar')]'.</msg>
+<arg>${BTN_ENTER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:48.872595" elapsed="1.811148"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:48.579161" elapsed="2.104582"/>
+</kw>
+<kw name="Quando preencher todos os campos" owner="Home">
+<kw name="Create account" owner="Login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:50.686743" level="INFO">Clicking button 'xpath=//*[contains(@data-cy,'login-createAccount')]'.</msg>
+<arg>${BTN_CREATE_ACCOUNT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:50.685744" elapsed="0.873496"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:51.561234" level="INFO">Typing text 'oslowwww' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:51.560239" elapsed="0.276705"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:51.837943" level="INFO">Typing text 'oslowwww@testqa.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:51.836944" elapsed="0.232986"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:52.070930" level="INFO">Typing text 'inpitseiacru' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:52.070930" elapsed="0.195715"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:52.268643" level="INFO">Typing text 'inpitseiacru' into text field 'id=confirmPassword'.</msg>
+<arg>id=confirmPassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:52.267667" elapsed="0.194154"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:50.685744" elapsed="1.776077"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:50.684742" elapsed="1.777079"/>
+</kw>
+<kw name="E clicar no botão 'Criar conta'" owner="Home">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:52.462821" level="INFO">Clicking button 'xpath=//*[@type='submit'][contains(.,'Criar conta')]'.</msg>
+<arg>${BTN_SUBMIT_CREATE_ACCOUNT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:52.462821" elapsed="0.344174"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:52.462821" elapsed="0.345172"/>
+</kw>
+<kw name="Então a conta é criada" owner="Home">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLOSE_ALERT}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T13:24:52.808996" elapsed="3.625394"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:56.435378" level="INFO">Clicking element 'xpath=//*[contains(@class, 'Toastify__close-button')]'.</msg>
+<arg>${CLOSE_ALERT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:56.434390" elapsed="0.155985"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AVATAR_PROFILE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T13:24:56.590375" elapsed="2.913825"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:59.505200" level="INFO">Clicking element 'xpath=//div[contains(@data-cy,'btn-trigger-profile')][contains(.,'')]'.</msg>
+<arg>${AVATAR_PROFILE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:59.505200" elapsed="0.215516"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:52.807993" elapsed="6.912723"/>
+</kw>
+<kw name="E o usuário faz o logout" owner="Home">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:24:59.721716" level="INFO">Clicking button 'xpath=//*[@type='button'][contains(.,'Sair')]'.</msg>
+<arg>${BTN_CLOSE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:24:59.721716" elapsed="0.424065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ENTER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T13:25:00.146781" elapsed="0.031988"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:59.720716" elapsed="0.458053"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:48.578161" elapsed="11.600608"/>
+</kw>
+<kw name="Quando o usuário faz login na conta" owner="Home">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:00.179769" level="INFO">Clicking button 'xpath=//*[contains(@data-cy,'btn-trigger-profile') and contains(text(), 'Entrar')]'.</msg>
+<arg>${BTN_ENTER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:25:00.179769" elapsed="0.167983"/>
+</kw>
+<kw name="Login user" owner="Login">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T13:25:00.348750" level="INFO">oslowwww@testqa.com</msg>
+<arg>${EMAIL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T13:25:00.348750" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T13:25:00.349747" level="INFO">inpitseiacru</msg>
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T13:25:00.349747" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:00.352754" level="INFO">Typing text 'oslowwww@testqa.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:25:00.350753" elapsed="0.350040"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:00.702792" level="INFO">Typing text 'inpitseiacru' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:25:00.701797" elapsed="0.319883"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:00.347752" elapsed="0.673928"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:01.022670" level="INFO">Clicking button 'xpath=//*[@type='submit'][contains(.,'Entrar')]'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:25:01.021680" elapsed="0.412469"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:00.178769" elapsed="1.255380"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AVATAR_PROFILE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T13:25:01.435155" elapsed="2.411007"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:24:48.577161" elapsed="15.269001"/>
+</kw>
+<kw name="E adiciono uma partida ao calendário" owner="Calendar">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CALENDAR_PAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T13:25:03.848163" elapsed="0.037286"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:03.886450" level="INFO">Clicking element 'xpath=(//*[@aria-label='Favoritar Partida']//img)[1]'.</msg>
+<arg>${FAV_GAME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:25:03.886450" elapsed="0.271443"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-02T13:25:07.159379" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-02T13:25:04.157893" elapsed="3.001486"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:03.847162" elapsed="3.313235"/>
+</kw>
+<kw name="E vou para a página Calendário" owner="Calendar">
+<kw name="Quando vou para a página Calendário" owner="Calendar">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CALENDAR_PAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T13:25:07.164425" elapsed="0.056440"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:07.220865" level="INFO">Clicking element 'xpath=//*[text()='Calendário']'.</msg>
+<arg>${CALENDAR_PAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:25:07.220865" elapsed="0.086440"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:07.163425" elapsed="0.143880"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${GAME_CARD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T13:25:07.307305" elapsed="2.901810"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:10.217119" level="INFO">Current location is 'https://www.kasa.live/calendario'.</msg>
+<arg>${EXPECTED_CALENDAR_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-07-02T13:25:10.209115" elapsed="0.008004"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:07.161398" elapsed="3.055721"/>
+</kw>
+<kw name="Quando desmarco a opção 'Partidas Favoritas'" owner="Calendar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:10.219119" level="INFO">Clicking element 'xpath=//label[@data-cy='switch-favorites']'.</msg>
+<arg>${DATA_CHECKED}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T13:25:10.218135" elapsed="0.150868"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:10.218135" elapsed="0.150868"/>
+</kw>
+<kw name="Então a partida não é mais exibida no calendário da página" owner="Calendar">
+<kw name="Wait Until Page Does Not Contain Element" owner="SeleniumLibrary">
+<arg>${GAME_CARD}</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" start="2024-07-02T13:25:10.372009" elapsed="0.020985"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:10.371000" elapsed="0.021994"/>
+</kw>
+<kw name="Close Page" owner="Base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-02T13:25:10.559027" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-02T13:25:10.398018" elapsed="0.162009"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-02T13:25:10.560027" elapsed="2.428190"/>
+</kw>
+<status status="PASS" start="2024-07-02T13:25:10.398018" elapsed="2.590199"/>
+</kw>
+<doc>Esse teste verifica se ao desmarcar a opção 'Partidas Favoritas'
+o calendário não exibe mais a partida favoritada</doc>
+<tag>desmarcar_partida</tag>
+<tag>partidas_favoritas</tag>
+<status status="PASS" start="2024-07-02T13:24:41.056895" elapsed="31.932324"/>
+</test>
+<doc>Essa suíte testa a página Calendário do site Kasa.live</doc>
+<status status="PASS" start="2024-07-02T13:24:40.568500" elapsed="32.423718"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">desmarcar_partida</stat>
+<stat pass="1" fail="0" skip="0">partidas_favoritas</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CalendarPage">CalendarPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

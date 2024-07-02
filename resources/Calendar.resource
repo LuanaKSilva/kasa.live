@@ -28,7 +28,8 @@ Então a partida é exibida no calendário da página
 
 E vou para a página Calendário
     Quando vou para a página Calendário
-    Location Should Be    ${EXPECTED_CALENDAR_URL}  
+    Wait Until Element Is Visible    ${GAME_CARD}    
+    Location Should Be               ${EXPECTED_CALENDAR_URL}  
 
 Quando desmarco a opção 'Partidas Favoritas'
     Click Element    ${DATA_CHECKED}
